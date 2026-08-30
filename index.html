@@ -1,12 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>日向の裏庭</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #f8f3e8;
+      color: #62564b;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+
+    .garden {
+      width: 90%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      margin: 0 0 15px;
+      color: #66594d;
+    }
+
+    .greeting {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .flower {
+      font-size: 1.5rem;
+      letter-spacing: 0.5em;
+      margin-bottom: 15px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 55px;
+    }
+
+    .menu-item {
+      display: block;
+      padding: 22px 24px;
+      background: #fffdf8;
+      border: 1px solid #ded4c5;
+      border-radius: 6px;
+      text-decoration: none;
+      color: inherit;
+      box-sizing: border-box;
+    }
+
+    .menu-item:hover {
+      background: #fffaf0;
+    }
+
+    .menu-title {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #6d5c4d;
+    }
+
+    .menu-description {
+      font-size: 0.82rem;
+      color: #897d70;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+      color: #766556;
+    }
+
+    .updates {
+      background: rgba(255, 253, 248, 0.7);
+      border-top: 1px solid #ded4c5;
+      border-bottom: 1px solid #ded4c5;
+      padding: 18px 25px;
+      font-size: 0.85rem;
+    }
+
+    .updates p {
+      margin: 5px 0;
+    }
+
+    .garden-info {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9a8d7f;
+      margin-top: 55px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa094;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .garden {
+        width: 88%;
+        padding: 40px 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .menu {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>🌱 日向の裏庭</h1>
-  <p>ここは日向の裏庭です。</p>
+
+  <main class="garden">
+
+    <header>
+      <div class="flower">✿　✿　✿</div>
+      <h1>日向の裏庭</h1>
+      <p class="greeting">
+        ここは裏庭です。<br>
+        どなたさまもご自由にどうぞ。
+      </p>
+    </header>
+
+    <nav class="menu">
+
+      <a href="#" class="menu-item">
+        <div class="menu-title">たそがれアーカイブ</div>
+        <div class="menu-description">
+          日々の生活の感想。日記。
+        </div>
+      </a>
+
+      <a href="#" class="menu-item">
+        <div class="menu-title">たそがれコレクション</div>
+        <div class="menu-description">
+          美術館や博物館で見つけた、ちょっと惹かれるものの記録。
+        </div>
+      </a>
+
+      <a href="#" class="menu-item">
+        <div class="menu-title">たからばこ</div>
+        <div class="menu-description">
+          最近ハマっているゲーム、本、映画、食べものなど。
+        </div>
+      </a>
+
+      <a href="#" class="menu-item">
+        <div class="menu-title">プロフィール</div>
+        <div class="menu-description">
+          そもそもお前は誰なんだ？
+        </div>
+      </a>
+
+      <a href="#" class="menu-item">
+        <div class="menu-title">リンクたち</div>
+        <div class="menu-description">
+          お気に入りのサイトが載っています。
+        </div>
+      </a>
+
+      <a href="#" class="menu-item">
+        <div class="menu-title">おたより</div>
+        <div class="menu-description">
+          何かありましたら、こちらからどうぞ。
+        </div>
+      </a>
+
+    </nav>
+
+    <section>
+      <h2>最近の更新</h2>
+
+      <div class="updates">
+        <p>2026.08.30　日向の裏庭が開園しました。</p>
+      </div>
+    </section>
+
+    <div class="garden-info">
+      🌱 開園　2026.08.30　｜　00001 hit
+    </div>
+
+    <footer>
+      晴れの日も雨の日も開いています。
+    </footer>
+
+  </main>
+
 </body>
 </html>
