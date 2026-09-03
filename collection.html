@@ -49,22 +49,112 @@
     .back:hover {
       text-decoration: underline;
     }
+
+        .collection-item {
+      margin-top: 60px;
+    }
+
+    .collection-title {
+      font-size: 1.4rem;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px;
+    }
+
+    .collection-info {
+      font-size: 0.85rem;
+      color: #897d70;
+      margin-bottom: 30px;
+    }
+
+    .main-photo {
+      width: 100%;
+      max-width: 520px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .sub-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .sub-photos img {
+      width: 100%;
+      display: block;
+    }
+
+    .memo {
+      margin-top: 35px;
+      font-size: 0.9rem;
+    }
+
+    .colbase {
+      display: inline-block;
+      margin-top: 20px;
+      color: #897d70;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .colbase:hover {
+      text-decoration: underline;
+    }
+    
   </style>
 </head>
 
 <body>
 
-  <main class="garden">
+ <main class="garden">
 
-    <h1>たそがれコレクション</h1>
+  <h1>たそがれコレクション</h1>
 
-    <p class="intro">
-      美術館、博物館などで出会ったものたちを記録しています。
+  <p class="intro">
+    美術館、博物館などで出会ったものたちを記録しています。
+  </p>
+
+
+  <section class="collection-item">
+
+    <h2 class="collection-title">猿猴図</h2>
+
+    <p class="collection-info">
+      狩野山雪 │ 江戸時代・17世紀（A-11845）
     </p>
 
-    <a class="back" href="index.html">← 日向の裏庭へ戻る</a>
 
-  </main>
+    <img
+      class="main-photo"
+      src="images/collection/A-11845/A-11845_01.jpg"
+      alt="猿猴図">
+
+    <div class="sub-photos">
+
+      <img
+        src="images/collection/A-11845/A-11845_02.jpg"
+        alt="猿猴図">
+
+      <img
+        src="images/collection/A-11845/A-11845_03.jpg"
+        alt="猿猴図">
+
+    </div>
+
+
+    <div class="memo">
+      ずっと見たかったおさる！もふもふかわいい。<br>
+      思ったより作品が縦長で面白い。
+    </div>
+
+
+  </section>
+
+
+  <a class="back" href="index.html">← 日向の裏庭へ戻る</a>
+
+</main>
 
 </body>
 </html>
