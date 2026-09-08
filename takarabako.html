@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>たからばこ｜日向の裏庭</title>
+
+  <style>
+    body {
+      background-color: #fffdf5;
+      color: #5f5143;
+      font-family: sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .flowers {
+      font-size: 28px;
+      letter-spacing: 8px;
+      margin-bottom: 5px;
+    }
+
+    .site-title {
+      font-size: 28px;
+      margin: 0;
+      font-weight: normal;
+    }
+
+    /* たからばこ */
+    .treasure {
+      text-align: center;
+    }
+
+    .treasure h1 {
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .treasure-lead {
+      margin-top: 0;
+      margin-bottom: 35px;
+    }
+
+    /* 箱 */
+    .treasure-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .treasure-box {
+      box-sizing: border-box;
+      width: 280px;
+      padding: 20px;
+      background-color: #fffefa;
+      border: 2px solid #9b8468;
+      box-shadow: 3px 3px 0 #d8cdbb;
+      text-align: left;
+    }
+
+    .treasure-box h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-bottom: 7px;
+      border-bottom: 1px dotted #9b8468;
+    }
+
+    .treasure-box p {
+      margin: 7px 0;
+    }
+
+    /* 箱を少しだけ傾ける */
+    .box-movie {
+      transform: rotate(-1deg);
+    }
+
+    .box-tv {
+      transform: rotate(1.5deg);
+    }
+
+    .box-music {
+      transform: rotate(-1.5deg);
+    }
+
+    .box-youtube {
+      transform: rotate(1deg);
+    }
+
+    .box-other {
+      transform: rotate(-0.5deg);
+    }
+
+    /* スマホ */
+    @media (max-width: 600px) {
+      .page {
+        padding: 25px 15px 50px;
+      }
+
+      .treasure-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="flowers">🌼 🌷 🌼</div>
+      <h1 class="site-title">日向の裏庭</h1>
+    </header>
+
+    <!-- たからばこ -->
+    <main class="treasure">
+
+      <h1>たからばこ</h1>
+      <p class="treasure-lead">すきなものを、ちょっとずつ。</p>
+
+      <div class="treasure-boxes">
+
+        <!-- 映画 -->
+        <div class="treasure-box box-movie">
+          <h2>映画</h2>
+          <p>『トイストーリー』</p>
+          <p>『ナイトミュージアム』</p>
+        </div>
+
+        <!-- テレビ -->
+        <div class="treasure-box box-tv">
+          <h2>テレビ</h2>
+          <p>いろはに千鳥「」</p>
+          <p>VIVANT</p>
+        </div>
+
+        <!-- 音楽 -->
+        <div class="treasure-box box-music">
+          <h2>音楽</h2>
+          <p>Eb!dan「Yes！東京」</p>
+          <p>吹奏楽</p>
+        </div>
+
+        <!-- YouTube -->
+        <div class="treasure-box box-youtube">
+          <h2>YouTube</h2>
+          <p>く見るチャンネル</p>
+          <p>お気に入りの動画</p>
+        </div>
+
+        <!-- その他 -->
+        <div class="treasure-box box-other">
+          <h2>🧺 その他</h2>
+          <p>ぽこあポケモン</p>
+          <p>好きなおやつ</p>
+          <p>好きなものいろいろ</p>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
