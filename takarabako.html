@@ -2,185 +2,237 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>たからばこ｜日向の裏庭</title>
 
   <style>
+
     body {
-      background-color: #fffdf5;
-      color: #5f5143;
-      font-family: sans-serif;
+      margin: 0;
+      background: #f8f3e8;
+      color: #62564b;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
       line-height: 1.8;
-      margin: 0;
-      padding: 0;
     }
 
-    .page {
-      max-width: 800px;
+    .garden {
+      width: 90%;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 30px 20px 60px;
+      padding: 60px 0;
     }
 
-    .header {
+    header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
-     .flower {
-     font-size: 1.5rem;
-     letter-spacing: 0.5em;
-     margin-bottom: 15px;
-     text-align: center;
-   }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      margin: 0 0 15px;
+      color: #66594d;
+    }
 
-    .site-title {
-      font-size: 28px;
+    .flower {
+      font-size: 1.5rem;
+      letter-spacing: 0.5em;
+      margin-bottom: 15px;
+    }
+
+    .lead {
+      font-size: 0.95rem;
       margin: 0;
-      font-weight: normal;
     }
 
-    /* たからばこ */
-    .treasure {
+    section {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      font-weight: normal;
       text-align: center;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+      color: #766556;
     }
 
-    .treasure h1 {
-      font-size: 25px;
-      font-weight: normal;
-      margin-bottom: 5px;
-    }
+    /* たからばこの箱 */
 
-    .treasure-lead {
-      margin-top: 0;
-      margin-bottom: 35px;
-    }
-
-    /* 箱 */
     .treasure-boxes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
 
     .treasure-box {
+      padding: 22px 24px;
+      background: #fffdf8;
+      border: 1px solid #ded4c5;
+      border-radius: 6px;
       box-sizing: border-box;
-      width: 280px;
-      padding: 20px;
-      background-color: #fffefa;
-      border: 2px solid #9b8468;
-      box-shadow: 3px 3px 0 #d8cdbb;
-      text-align: left;
     }
 
-    .treasure-box h2 {
-      font-size: 18px;
+    .treasure-box h3 {
+      font-size: 1.05rem;
       font-weight: normal;
-      margin-top: 0;
-      margin-bottom: 15px;
-      padding-bottom: 7px;
-      border-bottom: 1px dotted #9b8468;
+      margin: 0 0 12px;
+      color: #6d5c4d;
     }
 
     .treasure-box p {
-      margin: 7px 0;
+      font-size: 0.88rem;
+      margin: 6px 0;
+      color: #62564b;
     }
 
-    /* 箱を少しだけ傾ける */
-    .box-movie {
-      transform: rotate(-1deg);
+    .treasure-box p a {
+      color: #766556;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    .box-tv {
-      transform: rotate(1.5deg);
+    .treasure-box p a:hover {
+      color: #9a8068;
     }
 
-    .box-music {
-      transform: rotate(-1.5deg);
-    }
-
-    .box-youtube {
-      transform: rotate(1deg);
-    }
+    /* その他だけ少し幅広く */
 
     .box-other {
-      transform: rotate(-0.5deg);
+      grid-column: 1 / -1;
     }
 
-    /* スマホ */
+    .back {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.85rem;
+    }
+
+    .back a {
+      color: #766556;
+      text-decoration: none;
+      border-bottom: 1px dotted #9a8d7f;
+    }
+
+    .garden-info {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9a8d7f;
+      margin-top: 55px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa094;
+      margin-top: 50px;
+    }
+
     @media (max-width: 600px) {
-      .page {
-        padding: 25px 15px 50px;
+
+      .garden {
+        width: 88%;
+        padding: 40px 0;
       }
 
-      .treasure-box {
-        width: 90%;
+      h1 {
+        font-size: 2rem;
       }
+
+      .treasure-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .box-other {
+        grid-column: auto;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <div class="page">
+  <main class="garden">
 
-    <!-- ヘッダー -->
-    <header class="header">
+    <header>
       <div class="flower">✿　✿　✿</div>
-      <h1 class="site-title">日向の裏庭</h1>
+      <h1>たからばこ</h1>
+      <p class="lead">
+        すきなものを、ちょっとずつ。
+      </p>
     </header>
 
-    <!-- たからばこ -->
-    <main class="treasure">
 
-      <h1>たからばこ</h1>
-      <p class="treasure-lead">すきなものを、ちょっとずつ。</p>
+    <section>
 
       <div class="treasure-boxes">
 
-        <!-- 映画 -->
-        <div class="treasure-box box-movie">
-          <h2>映画</h2>
-          <p>『トイストーリー』</p>
-          <p>『ナイトミュージアム』</p>
+        <div class="treasure-box">
+          <h3>🎬 映画</h3>
+          <p>『好きな映画の名前』</p>
+          <p>『好きな映画の名前』</p>
+          <p>『好きな映画の名前』</p>
         </div>
 
-        <!-- テレビ -->
-        <div class="treasure-box box-tv">
-          <h2>テレビ</h2>
-          <p>いろはに千鳥「」</p>
-          <p>VIVANT</p>
+
+        <div class="treasure-box">
+          <h3>📺 テレビ</h3>
+          <p>好きな番組</p>
+          <p>好きな番組</p>
+          <p>好きな番組</p>
         </div>
 
-        <!-- 音楽 -->
-        <div class="treasure-box box-music">
-          <h2>音楽</h2>
-          <p>Eb!dan「Yes！東京」</p>
-          <p>吹奏楽</p>
+
+        <div class="treasure-box">
+          <h3>🎵 音楽</h3>
+          <p>好きな曲</p>
+          <p>好きなアーティスト</p>
+          <p>好きな音楽</p>
         </div>
 
-        <!-- YouTube -->
-        <div class="treasure-box box-youtube">
-          <h2>YouTube</h2>
-          <p>く見るチャンネル</p>
+
+        <div class="treasure-box">
+          <h3>📺 YouTube</h3>
+          <p>よく見るチャンネル</p>
           <p>お気に入りの動画</p>
+          <p>よく見るもの</p>
         </div>
 
-        <!-- その他 -->
+
         <div class="treasure-box box-other">
-          <h2>🧺 その他</h2>
+          <h3>🧺 その他</h3>
           <p>ぽこあポケモン</p>
           <p>好きなおやつ</p>
+          <p>好きな本</p>
           <p>好きなものいろいろ</p>
         </div>
 
       </div>
 
-<a class="back" href="index.html">← 日向の裏庭へ戻る</a>
-      
-    </main>
+    </section>
 
-  </div>
+
+    <div class="back">
+      <a href="index.html">← 日向の裏庭へ戻る</a>
+    </div>
+
+
+    <div class="garden-info">
+      🌱 開園　2026.08.30
+    </div>
+
+
+    <footer>
+      晴れの日も雨の日もお花は咲いています。
+    </footer>
+
+
+  </main>
 
 </body>
 </html>
