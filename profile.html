@@ -7,55 +7,115 @@
   <title>プロフィール｜日向の裏庭</title>
 
   <style>
+
     body {
       margin: 0;
       background: #f8f3e8;
       color: #62564b;
       font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .garden {
-      width: 90%;
+      width: 92%;
       max-width: 760px;
       margin: 0 auto;
-      padding: 60px 0;
+      padding: 60px 0 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .flower {
+      font-size: 1.5rem;
+      letter-spacing: 0.5em;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: normal;
       letter-spacing: 0.15em;
-      text-align: center;
-      margin: 0 0 45px;
+      margin: 0;
       color: #66594d;
     }
 
-    h2 {
-      font-size: 1.05rem;
-      font-weight: normal;
-      letter-spacing: 0.12em;
-      margin-top: 40px;
-      margin-bottom: 15px;
-      color: #766556;
+    .block {
+      background: rgba(255, 253, 248, 0.7);
+      border-top: 1px solid #ded4c5;
+      border-bottom: 1px solid #ded4c5;
+      padding: 30px 35px;
+      margin-bottom: 40px;
     }
 
-    p {
-      font-size: 0.9rem;
+    .block h2 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      color: #6d5c4d;
+      margin: 0 0 18px;
+      letter-spacing: 0.06em;
+    }
+
+    .block p {
+      font-size: 0.92rem;
+      letter-spacing: 0.008em;
+      margin: 0;
     }
 
     .back {
-      display: block;
-      margin-top: 50px;
       text-align: center;
-      font-size: 0.85rem;
-      color: #897d70;
-      text-decoration: none;
+      margin-top: 55px;
     }
 
-    .back:hover {
+    .back a {
+      color: #897d70;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .back a:hover {
+      color: #66594d;
       text-decoration: underline;
     }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa094;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+
+      .garden {
+        width: 92%;
+        padding: 40px 0 60px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+        white-space: nowrap;
+      }
+
+      .block {
+        padding: 24px 15px;
+      }
+
+      .block h2 {
+        font-size: 1.15rem;
+        letter-spacing: 0.02em;
+      }
+
+      .block p {
+        font-size: 0.90rem;
+        line-height: 1.8;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -63,23 +123,39 @@
 
   <main class="garden">
 
-    <h1>プロフィール</h1>
+    <header>
 
-    <h2>この庭について</h2>
-    <p>
-      地面をならして柵だけ立てて「今日からここがお庭です」と名前をつけたのが8/30。なぜこの日だったかというと、たまたまお仕事がお休みだったからです。<br>
-      これから少しずつ内容を増やします。がんばゆよ〜〜。<br>
-    </p>
+      <div class="flower">✿　✿　✿</div>
 
-    <h2>この人について</h2>
-    <p>
-      お名前：さんみ<br>
-      生まれた病院こそ関西でしたが、転勤で幼稚園に入る前に東京へ引っ越したため、ほぼ東京生まれ東京育ち。ただし母も父も西の方の人間のため、家のお雑煮は白味噌です。<br>
-      名前の由来は本名に「み」が3回登場することより。考えたのは自分ではなく、大学の同級生から借りパクしています。<br>
-      サイト名は雰囲気で決めました。庭とかええやん。あった方が。
-    </p>
+      <h1>プロフィール</h1>
 
-    <a class="back" href="index.html">← 日向の裏庭へ戻る</a>
+    </header>
+
+    <section class="block">
+      <h2>この庭について</h2>
+      <p>
+        地面をならして柵だけ立てて「今日からここがお庭です」と名前をつけたのが8/30。なぜこの日だったかというと、たまたまお仕事がお休みだったからです。<br>
+        これから少しずつ内容を増やします。がんばゆよ〜〜。
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>この人について</h2>
+      <p>
+        お名前：さんみ<br>
+        生まれた病院こそ関西でしたが、転勤で幼稚園に入る前に東京へ引っ越したため、ほぼ東京生まれ東京育ち。ただし母も父も西の方の人間のため、家のお雑煮は白味噌です。<br>
+        名前の由来は本名に「み」が3回登場することより。考えたのは自分ではなく、大学の同級生から借りパクしています。<br>
+        サイト名は雰囲気で決めました。庭とかええやん。あった方が。
+      </p>
+    </section>
+
+    <div class="back">
+      <a href="index.html">← 日向の裏庭へ戻る</a>
+    </div>
+
+    <footer>
+      足元にちいさなかわいいお花。
+    </footer>
 
   </main>
 
