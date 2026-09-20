@@ -81,7 +81,7 @@
   var heading = document.createElement('h2');
   heading.className = 'toc-title';
   heading.textContent = 'もくじ';
-  nav.appendChild(heading);
+  //nav.appendChild(heading);
 
   groups.forEach(function (g, gi) {
     var details = document.createElement('details');
