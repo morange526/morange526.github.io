@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>おたより｜日向の裏庭</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
 
+  body {
+    margin: 0;
+    background: #f8f3e8;
+    color: #62564b;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.9;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+  .garden {
+    width: 92%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+  }
+
+  header { text-align: center; margin-bottom: 50px; }
+
+  .flower {
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    margin: 0 0 15px;
+    color: #66594d;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    color: #897d70;
+    margin: 0;
+  }
+
+  form {
+    background: rgba(255, 253, 248, 0.7);
+    border-top: 1px solid #ded4c5;
+    border-bottom: 1px solid #ded4c5;
+    padding: 34px 32px;
+  }
+
+  .field { margin-bottom: 26px; }
+  .field:last-of-type { margin-bottom: 0; }
+
+  label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: #766556;
+    margin-bottom: 8px;
+  }
+
+  .required {
+    font-size: 0.72rem;
+    color: #b98b7a;
+    margin-left: 4px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    all: unset;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 8px 2px;
+    background: transparent;
+    border-bottom: 1px solid #ded4c5;
+    color: #62564b;
+    font-family: inherit;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    transition: border-color 0.25s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #c9a24b;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+
+  .submit-row {
+    text-align: center;
+    margin-top: 38px;
+  }
+
+  button[type="submit"] {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px 32px;
+    border-top: 1px solid #cbb894;
+    border-bottom: 1px solid #cbb894;
+    color: #6d5c4d;
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.25s ease;
+  }
+  button[type="submit"]:hover { background: rgba(255, 250, 240, 0.9); }
+  button[type="submit"]:focus-visible { outline: 2px solid #c9a24b; outline-offset: 2px; }
+
+  .note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #9a8d7f;
+    margin-top: 18px;
+  }
+
+  .back {
+    text-align: center;
+    margin-top: 55px;
+  }
+  .back a {
+    color: #897d70;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  .back a:hover { color: #66594d; text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #aaa094;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 600px) {
+    .garden { width: 90%; padding: 40px 0 60px; }
+    h1 { font-size: 1.7rem; letter-spacing: 0.08em; }
+    form { padding: 26px 20px; }
+  }
+</style>
+</head>
+<body>
+  <main class="garden">
+    <header>
+      <div class="flower">✿　✿　✿</div>
+      <h1>おたより</h1>
+      <p class="intro">
+        ご感想やご連絡は、こちらからどうぞ。<br>
+        お返事は気長にお待ちください。<br>
+        あまりに怪しいものにはお返事しません。<br>
+      </p>
+    </header>
+
+    <!--
+      ここのaction先を、Formspreeで発行された自分専用のURLに差し替えてください。
+      例：https://formspree.io/f/xxxxxxxx
+    -->
+    <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+
+      <input type="hidden" name="_subject" value="日向の裏庭：おたよりが届きました">
+
+      <div class="field">
+        <label for="name">お名前<span class="required">必須</span></label>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="email">メールアドレス<span class="required">必須</span></label>
+        <input type="email" id="email" name="_replyto" autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="message">要件をどうぞ<span class="required">必須</span></label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit">送る</button>
+      </div>
+    </form>
+
+    <p class="note">送信すると、わたしにメールで届きます。</p>
+
+    <div class="back"><a href="index.html">← 日向の裏庭へ戻る</a></div>
+
+    <footer>おたより待ってます。いつでもどうぞ。</footer>
+  </main>
+</body>
+</html>
