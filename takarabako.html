@@ -1,238 +1,236 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>たからばこ｜日向の裏庭</title>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>たからばこ｜日向の裏庭</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
 
-  <style>
+  body {
+    margin: 0;
+    background: #f8f3e8;
+    color: #62564b;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.8;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
 
-    body {
-      margin: 0;
-      background: #f8f3e8;
-      color: #62564b;
-      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-      line-height: 1.8;
-    }
+  .garden {
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+  }
 
-    .garden {
-      width: 90%;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
+  header { text-align: center; margin-bottom: 50px; }
 
-    header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+  .flower {
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    margin-bottom: 15px;
+  }
 
-    h1 {
-      font-size: 2.4rem;
-      font-weight: normal;
-      letter-spacing: 0.15em;
-      margin: 0 0 15px;
-      color: #66594d;
-    }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    margin: 0 0 15px;
+    color: #66594d;
+  }
 
-    .flower {
-      font-size: 1.5rem;
-      letter-spacing: 0.5em;
-      margin-bottom: 15px;
-    }
+  .intro {
+    font-size: 0.9rem;
+    margin: 0;
+  }
 
-    .lead {
-      font-size: 0.95rem;
-      margin: 0;
-    }
+  .category { margin-bottom: 48px; }
 
-    section {
-      margin-bottom: 45px;
-    }
+  .category h2 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0.12em;
+    margin: 0 0 20px;
+    color: #766556;
+  }
 
-    h2 {
-      font-size: 1.05rem;
-      font-weight: normal;
-      text-align: center;
-      letter-spacing: 0.12em;
-      margin-bottom: 20px;
-      color: #766556;
-    }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
-    /* たからばこの箱 */
+  .chip {
+    flex: 1 1 180px;
+    max-width: 260px;
+  }
 
-    .treasure-boxes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
+  .chip-btn {
+    all: unset;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 6px;
+    background: rgba(255, 253, 248, 0.7);
+    border-top: 1px solid #ded4c5;
+    border-bottom: 1px solid #ded4c5;
+    color: #6d5c4d;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+  }
+  .chip-btn:hover { background: rgba(255, 250, 240, 0.9); }
+  .chip-btn:focus-visible { outline: 2px solid #c9a24b; outline-offset: 2px; }
 
-    .treasure-box {
-      padding: 22px 24px;
-      background: #fffdf8;
-      border: 1px solid #ded4c5;
-      border-radius: 6px;
-      box-sizing: border-box;
-    }
+  .chip.open .chip-btn {
+    background: rgba(255, 250, 240, 0.9);
+    border-color: #cbb894;
+    border-bottom: none;
+  }
 
-    .treasure-box h3 {
-      font-size: 1.05rem;
-      font-weight: normal;
-      margin: 0 0 12px;
-      color: #6d5c4d;
-    }
+  .chip-detail-outer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+  }
+  .chip.open .chip-detail-outer { grid-template-rows: 1fr; }
 
-    .treasure-box p {
-      font-size: 0.88rem;
-      margin: 6px 0;
-      color: #62564b;
-    }
+  .chip-detail-inner { overflow: hidden; }
 
-    .treasure-box p a {
-      color: #766556;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+  .chip-detail {
+    padding: 10px 12px;
+    background: rgba(255, 253, 248, 0.5);
+    border-bottom: 1px solid #cbb894;
+    font-size: 0.78rem;
+    color: #897d70;
+    text-align: left;
+  }
+  .chip-detail p { margin: 0; }
+  .chip-detail a { color: #897d70; text-decoration: underline; text-decoration-color: #cbb894; }
+  .chip-detail a:hover { color: #66594d; }
 
-    .treasure-box p a:hover {
-      color: #9a8068;
-    }
+  .back {
+    text-align: center;
+    margin-top: 55px;
+    font-size: 0.85rem;
+  }
+  .back a { color: #897d70; text-decoration: none; }
+  .back a:hover { color: #66594d; text-decoration: underline; }
 
-    /* その他だけ少し幅広く */
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #aaa094;
+    margin-top: 50px;
+  }
 
-    .box-other {
-      grid-column: 1 / -1;
-    }
-
-    .back {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.85rem;
-    }
-
-    .back a {
-      color: #766556;
-      text-decoration: none;
-      border-bottom: 1px dotted #9a8d7f;
-    }
-
-    .garden-info {
-      text-align: center;
-      font-size: 0.78rem;
-      color: #9a8d7f;
-      margin-top: 55px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.75rem;
-      color: #aaa094;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 600px) {
-
-      .garden {
-        width: 88%;
-        padding: 40px 0;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .treasure-boxes {
-        grid-template-columns: 1fr;
-      }
-
-      .box-other {
-        grid-column: auto;
-      }
-
-    }
-
-  </style>
+  @media (max-width: 600px) {
+    .garden { width: 88%; padding: 40px 0 60px; }
+    h1 { font-size: 1.8rem; }
+    .chip { flex: 1 1 140px; max-width: 220px; }
+  }
+</style>
 </head>
-
 <body>
-
   <main class="garden">
-
     <header>
       <div class="flower">✿　✿　✿</div>
       <h1>たからばこ</h1>
-      <p class="lead">
-        すきなものを、ちょっとずつ。
+      <p class="intro">
+        その時ハマっているもの。ゲームや本、映画や食べもの。<br>
+        タップすると、ちょっとだけ中身が見られます。
       </p>
     </header>
 
+    <div id="categories"></div>
 
-    <section>
+    <div class="back"><a href="index.html">← 日向の裏庭へ戻る</a></div>
 
-      <div class="treasure-boxes">
-
-        <div class="treasure-box">
-          <h3>🎬 映画</h3>
-          <p>『好きな映画の名前』</p>
-          <p>『好きな映画の名前』</p>
-          <p>『好きな映画の名前』</p>
-        </div>
-
-
-        <div class="treasure-box">
-          <h3>📺 テレビ</h3>
-          <p>好きな番組</p>
-          <p>好きな番組</p>
-          <p>好きな番組</p>
-        </div>
-
-
-        <div class="treasure-box">
-          <h3>🎵 音楽</h3>
-          <p>好きな曲</p>
-          <p>好きなアーティスト</p>
-          <p>好きな音楽</p>
-        </div>
-
-
-        <div class="treasure-box">
-          <h3>📺 YouTube</h3>
-          <p>よく見るチャンネル</p>
-          <p>お気に入りの動画</p>
-          <p>よく見るもの</p>
-        </div>
-
-
-        <div class="treasure-box box-other">
-          <h3>🧺 その他</h3>
-          <p>ぽこあポケモン</p>
-          <p>好きなおやつ</p>
-          <p>好きな本</p>
-          <p>好きなものいろいろ</p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <div class="back">
-      <a href="index.html">← 日向の裏庭へ戻る</a>
-    </div>
-
-
-    <div class="garden-info">
-      🌱 開園　2026.08.30
-    </div>
-
-
-    <footer>
-      お花は繰り返し咲くし、種もできる。
-    </footer>
-
-
+    <footer>あけたら、そっと閉めておいてね。</footer>
   </main>
 
+<script>
+  // カテゴリを増やしたいときは、この配列に { name: "映画", items: [...] } の形で
+  // オブジェクトを追加するだけでOKです。
+  const categories = [
+    {
+      name: "ゲーム",
+      items: [
+        {
+          name: "ポケモン",
+          detail: "ずっと昔からデンリュウがすき。進化してもかわいいままなのに、とっても強くて頼れる存在。ぬいぐるみもあるし、この子が出ないという理由でゲームを買わなかったことも。"
+        }
+      ]
+    },
+    {
+      name: "その他すきなもの",
+      items: [
+        { name: "麺つゆ", detail: "（ここに好きな理由をメモしてね）" },
+        { name: "ぬいぐるみ", detail: "（ここに好きな理由をメモしてね）" },
+        { name: "お花", detail: "（ここに好きな理由をメモしてね）" }
+      ]
+    },
+    {
+      name: "映画",
+      items: [
+        { name: "（映画のタイトル）", detail: "（ここに好きな理由をメモしてね。日記にリンクしたい場合は archive.html#日付 の形で <a> タグを使えます）" }
+      ]
+    },
+    {
+      name: "本",
+      items: [
+        { name: "（本のタイトル）", detail: "（ここに好きな理由をメモしてね）" }
+      ]
+    }
+  ];
+
+  const wrap = document.getElementById("categories");
+
+  categories.forEach(cat => {
+    const section = document.createElement("section");
+    section.className = "category";
+
+    const h2 = document.createElement("h2");
+    h2.textContent = cat.name;
+    section.appendChild(h2);
+
+    const chips = document.createElement("div");
+    chips.className = "chips";
+
+    cat.items.forEach(item => {
+      const chip = document.createElement("div");
+      chip.className = "chip";
+      chip.innerHTML = `
+        <button class="chip-btn" aria-expanded="false">${item.name}</button>
+        <div class="chip-detail-outer">
+          <div class="chip-detail-inner">
+            <div class="chip-detail"><p>${item.detail}</p></div>
+          </div>
+        </div>
+      `;
+      const btn = chip.querySelector(".chip-btn");
+      btn.addEventListener("click", () => {
+        const isOpen = chip.classList.toggle("open");
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
+      chips.appendChild(chip);
+    });
+
+    section.appendChild(chips);
+    wrap.appendChild(section);
+  });
+</script>
 </body>
 </html>
