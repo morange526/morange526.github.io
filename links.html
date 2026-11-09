@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>リンクたち｜日向の裏庭</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+
+  body {
+    margin: 0;
+    background: #f8f3e8;
+    color: #62564b;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.9;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+  .garden {
+    width: 92%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 0 80px;
+  }
+
+  header { text-align: center; margin-bottom: 50px; }
+
+  .flower {
+    font-size: 1.5rem;
+    letter-spacing: 0.5em;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+    margin: 0 0 15px;
+    color: #66594d;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    color: #897d70;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0.12em;
+    margin: 0 0 20px;
+    color: #766556;
+  }
+
+  section { margin-bottom: 45px; }
+
+  .link-item {
+    display: block;
+    background: rgba(255, 253, 248, 0.7);
+    border-top: 1px solid #ded4c5;
+    border-bottom: 1px solid #ded4c5;
+    padding: 18px 25px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.25s ease;
+  }
+  .link-item:hover { background: rgba(255, 250, 240, 0.9); }
+
+  .link-title {
+    font-size: 1rem;
+    color: #6d5c4d;
+    margin-bottom: 2px;
+  }
+
+  .link-title::after {
+    content: " →";
+    color: #aaa094;
+  }
+
+  .link-description {
+    font-size: 0.82rem;
+    color: #897d70;
+    line-height: 1.7;
+  }
+
+  .back {
+    text-align: center;
+    margin-top: 55px;
+  }
+  .back a {
+    color: #897d70;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  .back a:hover { color: #66594d; text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #aaa094;
+    margin-top: 50px;
+  }
+
+  @media (max-width: 600px) {
+    .garden { width: 90%; padding: 40px 0 60px; }
+    h1 { font-size: 1.7rem; letter-spacing: 0.08em; }
+    .link-item { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+  <main class="garden">
+    <header>
+      <div class="flower">✿　✿　✿</div>
+      <h1>リンクたち</h1>
+      <p class="intro">
+        おすすめのサイトたち。<br>
+        押すと別のページが開きます。
+      </p>
+    </header>
+
+    <!-- ここから「カテゴリ」1つ分。増やしたいときは section ごとコピーして貼ってください -->
+    <section>
+      <h2>美術館・博物館</h2>
+
+      <!-- ここから「リンク」1件分。増やしたいときは a タグごとコピーしてください -->
+      <a class="link-item" href="https://colbase.nich.go.jp/" target="_blank" rel="noopener">
+        <div class="link-title">ColBase</div>
+        <div class="link-description">国立博物館所蔵品の検索サイト。（←これは例です。書き換えてね）</div>
+      </a>
+      <!-- ここまで「リンク」1件分 -->
+
+      <a class="link-item" href="https://example.com/" target="_blank" rel="noopener">
+        <div class="link-title">（サイトの名前）</div>
+        <div class="link-description">（ここにおすすめの理由を書いてね）</div>
+      </a>
+    </section>
+    <!-- ここまで「カテゴリ」1つ分 -->
+
+    <section>
+      <h2>その他</h2>
+
+      <a class="link-item" href="https://example.com/" target="_blank" rel="noopener">
+        <div class="link-title">（サイトの名前）</div>
+        <div class="link-description">（ここにおすすめの理由を書いてね）</div>
+      </a>
+    </section>
+
+    <div class="back"><a href="index.html">← 日向の裏庭へ戻る</a></div>
+
+    <footer>草と土のいいにおい。</footer>
+  </main>
+</body>
+</html>
