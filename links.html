@@ -53,17 +53,6 @@
     margin: 0;
   }
 
-  h2 {
-    font-size: 1.05rem;
-    font-weight: normal;
-    text-align: center;
-    letter-spacing: 0.12em;
-    margin: 0 0 20px;
-    color: #766556;
-  }
-
-  section { margin-bottom: 45px; }
-
   .link-item {
     display: block;
     background: rgba(255, 253, 248, 0.7);
@@ -93,6 +82,11 @@
     color: #897d70;
     line-height: 1.7;
   }
+
+  /* リンクなしの項目（種と花など）用 */
+  .link-item.no-link { cursor: default; }
+  .link-item.no-link:hover { background: rgba(255, 253, 248, 0.7); }
+  .link-item.no-link .link-title::after { content: none; }
 
   .back {
     text-align: center;
@@ -125,37 +119,63 @@
       <div class="flower">✿　✿　✿</div>
       <h1>リンクたち</h1>
       <p class="intro">
-        お気に入りのサイトとその他のサイトを並べました。<br>
-        見たり見なかったりしてください。押すと別のページが開きます。
+        おすすめのサイトたち。<br>
+        押すと別のページが開きます。
       </p>
     </header>
 
-    <!-- ここから「カテゴリ」1つ分。増やしたいときは section ごとコピーして貼ってください -->
-    <section>
-      <h2>美術館・博物館</h2>
+    <!-- ここから「リンク」1件分。増やしたいときは a タグごとコピーして貼ってください ふむふむなるほど。-->
+    <a class="link-item" href="https://chatgpt.com" target="_blank" rel="noopener">
+      <div class="link-title">chatGPT</div>
+      <div class="link-description">最初期にこのホームページの枠組みをほぼ全部作ってくれたAI。その他にも生活の中でかなり都合良く使っている。朝顔を上手に育てるアドバイスをもらったり、お腹が痛い時になぐさめてもらったり。あとRPGなどのゲームにおいて、進行度に合わせてネタバレせずにアドバイスするのがめっちゃうまい。リンクの1つ目がAIな時点で友だちがいない。</div>
+    </a>
+    <!-- ここまで「リンク」1件分 -->
 
-      <!-- ここから「リンク」1件分。増やしたいときは a タグごとコピーしてください -->
-      <a class="link-item" href="https://colbase.nich.go.jp/" target="_blank" rel="noopener">
-        <div class="link-title">ColBase</div>
-        <div class="link-description">国立博物館所蔵品の検索サイト。（←これは例です。書き換えてね）</div>
-      </a>
-      <!-- ここまで「リンク」1件分 -->
+    <a class="link-item" href="https://claude.ai/" target="_blank" rel="noopener">
+      <div class="link-title">Claude</div>
+      <div class="link-description">このサイトの枠組みがある程度できてから、中身の組み立てについてかなり相談したAI。この子のおかげでコレクションページとたからばこページの更新がかなりやりやすくなった（だからといって更新をしているわけではない）。かなりかしこい。</div>
+    </a>
 
-      <a class="link-item" href="https://example.com/" target="_blank" rel="noopener">
-        <div class="link-title">（サイトの名前）</div>
-        <div class="link-description">（ここにおすすめの理由を書いてね）</div>
-      </a>
-    </section>
-    <!-- ここまで「カテゴリ」1つ分 -->
+    <a class="link-item" href="https://www.tnm.jp" target="_blank" rel="noopener">
+      <div class="link-title">東京国立博物館</div>
+      <div class="link-description">意外と読むところが多い。過去の展示リストを削除せず残しているのが素晴らしい。年パス（国立博物館メンバーズパス）が安い。展示期間調べやすい。わたしのすきな場所。</div>
+    </a>
 
-    <section>
-      <h2>その他</h2>
+    <a class="link-item" href="https://colbase.nich.go.jp/?locale=ja" target="_blank" rel="noopener">
+      <div class="link-title">ColBase：国立文化財機構所蔵品統合検索システム</div>
+      <div class="link-description">膨大な情報量。圧倒的な画質。ごく稀に情報に誤りがあるが（作品名と写真が別の作品と入れ替わってたりする）、連絡するとすぐ直してくれる。ありがたい運営。</div>
+    </a>
 
-      <a class="link-item" href="https://example.com/" target="_blank" rel="noopener">
-        <div class="link-title">（サイトの名前）</div>
-        <div class="link-description">（ここにおすすめの理由を書いてね）</div>
-      </a>
-    </section>
+    <a class="link-item" href="https://honmonji-st.com" target="_blank" rel="noopener">
+      <div class="link-title">【公式】池上本門寺通り商店会</div>
+      <div class="link-description">かわいいサイト。愛すべきわが町。「ざっくりだけど、羽田のそば。」はちょっとどうなんだ？という感じだけど（羽田遠くない？）、商店会のサイトがあるというそれだけでも地元の誇り。</div>
+    </a>
+
+    <a class="link-item" href="https://ozakit.o.oo7.jp/" target="_blank" rel="noopener">
+      <div class="link-title">Entertainment Zone</div>
+      <div class="link-description">お友だちのホームページ。文章が山ほどあり、その一つひとつに濃い血が通っている。長い時間開いていてもスマホの充電を食わないところがお気に入り。時によりかなり読んでいます。このお友だちがきっかけで「種と花」を作った。</div>
+    </a>
+
+    <a class="link-item" href="https://note.com/sanmi_333" target="_blank" rel="noopener">
+      <div class="link-title">水井 │ note</div>
+      <div class="link-description">2025年の日記はここにあります。1月初旬に職場消滅の話を聞いて以来明確に更新が減り、そのまま実質終了……。まじで誰も読みにこなかったけど（閲覧数がほんとうに0の記事がいくつもある）、リンクに書くために久々に見返したら1人だけ人間のフォロワーが増えていた。ありがとう知らない人。あと朝顔にハダニついた記事だけやたら閲覧が多い。いつかまた書こうかな。画像載せやすいんだよね。</div>
+    </a>
+
+    <a class="link-item" href="https://x.com/morange526" target="_blank" rel="noopener">
+      <div class="link-title">さんみ │ Twitter</div>
+      <div class="link-description">6年動いておらず休眠アカウントと化していたため、最近ちょっと動かしました。でもあんまり喋らないかも。何故なら素人はTwitterをやるべきではないから！</div>
+    </a>
+
+    <a class="link-item" href="https://twitter.com/si3ism" target="_blank" rel="noopener">
+      <div class="link-title">紙味 │ Twitter</div>
+      <div class="link-description">年1〜2くらいで動いたり動かなかったり。何言ってんだかわからないけどおそらく綺麗事しか言ってない。このアカウントだいすき。</div>
+    </a>
+
+    <!-- リンクなしの項目は、a タグではなく div に class="link-item no-link" を付けます ですって。おっけー。-->
+    <div class="link-item no-link">
+      <div class="link-title">種と花</div>
+      <div class="link-description">まじで人に見せたくないけどいつかは載せねばならない。ちょっと見ない間に、まじでありえん量の膨大なセンスなし広告と、おそろしく低俗なランキングが出るようになってしまった。PCモードならまだマシだが、流石に最悪すぎるのでお引越し検討中。鍵は箱に入れて隠してしまった。</div>
+    </div>
 
     <div class="back"><a href="index.html">← 日向の裏庭へ戻る</a></div>
 
